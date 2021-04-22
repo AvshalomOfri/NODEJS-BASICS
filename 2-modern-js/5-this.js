@@ -1,14 +1,14 @@
 // "this" here is "exports"
 
-this.id = 'exports';
+this.id = "exports";
 
 const testerObj = {
   func1: function () {
-    console.log('func1', this);
+    console.log("func1", this);
   },
 
   func2: () => {
-    console.log('func2', this);
+    console.log("func2", this);
   },
 };
 

@@ -1,6 +1,9 @@
-const theOneFunc = () => {};
+const theOneFunc = (sec) => {
+  console.log(sec + " seconds has passed");
+};
 
-setTimeout(theOneFunc, 4 * 1000);
+setTimeout(theOneFunc, 1 * 1000, 1);
+setTimeout(theOneFunc, 2 * 1000, 2);
 
 // Hello after 4 seconds
 
