@@ -5,7 +5,8 @@ const parentPath =
 
 const files = ["1-loop.js", "2-try.js", "./noSuchFile"];
 
-//Here w
+//Error vs Exception
+// An error will terminate the process while an exception will let the user know something exceptional has occured but won't kill the process and will proceed to the next operation
 files.forEach((file) => {
   try {
     const filePath = path.resolve(parentPath, file);
@@ -13,7 +14,7 @@ files.forEach((file) => {
     const data = fs.readFileSync(filePath);
     console.log("File data is", data);
   } catch (err) {
-    //here we'll check for an actual ENOENT (file not found) error and not just throw a generic 'file not found' message irregardless of the error type. In case of an ENONET err, we'll log the message and proceed to the next element to read. In case of another error, we'll throw err and the node process will terminate
+    //here we'll check for an actual ENOENT (file not found) error and not just throwing a generic, non-specific error message irregardless of error type. In case of an ENONET err, we'll log the message and proceed to the next element to read. In case of another error, we'll throw err and the node process will terminate
     if (err.code === "ENOENT") {
       console.log("File not found");
     } else {

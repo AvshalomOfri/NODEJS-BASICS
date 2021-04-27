@@ -9,7 +9,7 @@ const obj = {
   f1() {},
   f2: () => {},
   [dynProp]: "Some value", //property name can be changed dynamically
-  PI, //instead of "name: value" you can simply write the variable's name
+  PI, //instead of "key: value" you can simply write the variable's name
 };
 
 console.log(obj.dynProp); //returns undefined
