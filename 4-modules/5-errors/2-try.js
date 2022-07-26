@@ -5,6 +5,7 @@ const parentPath =
 
 const files = ["1-loop.js", "2-try.js", "./noSuchFile"];
 
+//a try catch block provides a more customized way of error handling. in this example a custom message will be logged instead of the usual wall of text..
 try {
   files.forEach((file) => {
     const filePath = path.resolve(parentPath, file);
